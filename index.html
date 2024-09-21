@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Limit</title>
+</head>
+<body>
+    <h1>Lost Limit</h1>
+    <form onsubmit="return verificarResposta()">
+        <h2>Para resolver o mistério, Louis precisa descobrir às raízes da seguinte equação: 5x^2 - 20x + 15</h2>
+        <input type="radio" id="q1a" name="q1" value="6">
+        <label for="q1a">A- 2 e 4</label><br><br>
+        <input type="radio" id="q1b" name="q1" value="1 e 3">
+        <label for="q1b">B- 1 e 3</label><br><br>
+        <input type="radio" id="q1c" name="q1" value="8">
+        <label for="q1c">C- 4 e 7</label><br><br>
+        <input type="radio" id="q1d" name="q1" value="9">
+        <label for="q1d">D- 1 e 2</label><br><br>
+        <input type="radio" id="q1e" name="q1" value="10">
+        <label for="q1e">E- 2 e 5</label><br><br>
+        <button type="submit">Enviar Respostas</button>
+    </form>
+
+    <script>
+        function verificarResposta() {
+            const respostaSelecionada = document.querySelector('input[name="q1"]:checked').value;
+
+            if (respostaSelecionada === "1 e 3") {
+                window.location.href = "file:///C:/Users/madfi/Documents/LostLimit/certo.html";
+            } else {
+                window.location.href = "file:///C:/Users/madfi/Documents/LostLimit/errado.html";
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>
